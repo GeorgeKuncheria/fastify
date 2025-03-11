@@ -1,5 +1,6 @@
 # fastify
 
+## Initiate node 
 
 ```bash
 npm init -y
