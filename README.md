@@ -25,6 +25,6 @@ npx tsc --init
 ```
 
 First modify things from tsconfig.json 
-    - In target change to ESNEXT
+    - In target change to ESNext
     - UNCOMMENT baseURL,moduleResolution,outDir
     - outDir should "./dist"
