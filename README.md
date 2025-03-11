@@ -28,3 +28,17 @@ First modify things from tsconfig.json
     - In target change to ESNext
     - UNCOMMENT baseURL,moduleResolution,outDir
     - outDir should "./dist"
+
+
+## Install Nodemon 
+
+```bash
+
+npm install nodemon
+
+    or
+
+sudo npm install -g nodemon
+```
+
+
