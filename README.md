@@ -42,3 +42,10 @@ sudo npm install -g nodemon
 ```
 
 
+
+## package.json Script:
+    "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "tsc -w & nodemon dist/index.js"
+  },
+
