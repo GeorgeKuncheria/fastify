@@ -1,4 +1,4 @@
-# fastify
+# fastify Setup
 
 ## Initiate node 
 
