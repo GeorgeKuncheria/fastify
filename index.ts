@@ -1,18 +1,28 @@
-import fastify, {FastifyInstance} from "fastify";
+import fastify, {FastifyInstance, FastifyReply, FastifyRequest} from "fastify";
+import pinoPretty from "pino-pretty";
+//pino pretty is a pretty logger for console output
+import route from "./routes/route";
+import connectDB from "./connection";
+import dotenv from "dotenv";
+dotenv.config();
 
-
-const app : FastifyInstance  = fastify({ logger: true });
-
-app.get("/", async (request, reply) => {
-    return { response: "hello world" };
+const app: FastifyInstance = fastify({
+    logger: {
+        level: 'info',
+        stream: pinoPretty({
+            colorize: true
+        })
+    }
 });
 
 
+
+app.register(connectDB);
+
+route(app);
+
+
 app.listen({ port: 8000 }, (err, address) => {
-    if (err) {
-        app.log.error(err);
-        process.exit(1);
-    }
     console.log(`Server listening at ${address}`);
 })
 
