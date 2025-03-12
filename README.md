@@ -9,13 +9,13 @@ npm init -y
 ## To install TypeScript  and types
 
 ```bash
-npm install -D typecript @types/node
+npm install -D typescript @types/node
 ```
 
 ## To install Fastify
 
 ```bash
-npn install fastify
+npm install fastify
 ```
 
 
